@@ -37,8 +37,17 @@ public class CrapsGame
 	  {
 		  if(total==7)
 		  {
-			  result = 0;
+			  result = -1;
 			  point = 0;
+		  }
+		  else if (total==point)
+		  {
+			  result = 1;
+			  point = 0;
+		  }
+		  else 
+		  {
+			  result = 0;
 		  }
 	  }
   
