@@ -33,7 +33,14 @@ public class CrapsGame
 		}
    
    		}
-	  	
+	  else
+	  {
+		  if(total==7)
+		  {
+			  result = 0;
+			  point = 0;
+		  }
+	  }
   
     return result;
   }
