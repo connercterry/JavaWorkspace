@@ -1,19 +1,16 @@
 
 public class Die 
 {
-	private int numDots = 0;
+	private int numDots;
 	
 	public void roll()
 	{ 
-	
+	numDots = (int)(Math.random()*6)+1;
 	}
 	
-	public int getNumDots(numDots)
+	public int getNumDots()
 	{	
-		
-		
-		
-		return getNumDots;
+	return numDots;
 	} 
 	  
 }
