@@ -11,27 +11,23 @@ public class MyMath
 		int count = 0; 
 		while(count < n )
 		{
-			for(int m = 3 ; m<n; m++)
+			if(isPerfect(m))
 			{
-				if(n%m==0)
-				{
-					sum+=m;
-				}
+				result += m + " ";
+				count++;
 			}
+			
+			m++;
 		}
-		
-		
-		
 		
 		return result;
 	}
 	
 	public static boolean isPerfect(int n)
 	{
-		boolean result = false;
-		int i=1; 
+		boolean result = false; 
 		int sum = 0;
-		for(i = 1 ; i < n; i++)
+		for(int i = 1 ; i < n; i++)
 		{
 		 if(n%i==0)
 		 {
@@ -144,13 +140,13 @@ public class MyMath
     System.out.println();
     System.out.println("1 + ... + " + n + " = " + sumUpTo(n));
     System.out.println(n + "! = " + factorial(n));
-    System.out.println("Primes: ");
+   System.out.println("Primes: ");
     for (int k = 1; k <= n; k++)
-      if (isPrime(k))
+     if (isPrime(k))
         System.out.print(k + " ");
-    System.out.println();
+   System.out.println();
     System.out.println("Goldbach conjecture up to " + n + ": " + testGoldbach(n));
-    System.out.println(isPerfect(6));
+    System.out.println(perfectNumbers(4));
   }
 }
 
