@@ -44,7 +44,31 @@ public class MyMath
 		return result;
 	}
 	
+	public static String betterPerfect(int m)
+	{
+		String result = "The first " + m + " perfect numbers are: ";
+	int n = 4;
+	int pow2 = 2;
+	int count = 0;
+	long perfect = 0;
+	while(count<m)
+	{
+		if(isPrime(n-1))
+		{
+			perfect = (n/2)*(n-1);
+			count++;
+			result = result + perfect + " ";
+		}
+		pow2++;
+		n*=2;
+	}
+		
+		
+		
 	
+	
+	return result;
+	}
 	
 	
 	
@@ -147,6 +171,7 @@ public class MyMath
    System.out.println();
     System.out.println("Goldbach conjecture up to " + n + ": " + testGoldbach(n));
     System.out.println(perfectNumbers(4));
+    System.out.println(betterPerfect(6));
   }
 }
 
